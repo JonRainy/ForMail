@@ -82,7 +82,7 @@ public class SendMailServiceImp implements SendMailService {
                     .basicAuth("api", mailConfig.getKey())
                     .queryString("from", mailConfig.getFrom())
                     .queryString("to", emailDTO.getSendTo())
-                    .queryString("subject", "hello")
+                    .queryString("subject", "Activation code")
                     .queryString("text", emailDTO.getContent())
                     .asJson();
 
