@@ -19,7 +19,7 @@ public interface LicenceCodeDao {
 
     List<LicenceCodeDTO> queryLiceneCodeForUpdate(@Param("userMail")String user);
 
-    List<LicenceCodeDTO> checkLiceneCode(@Param("code")String code, @Param("deviceCode")String deviceCode);
+    Boolean checkLiceneCode(@Param("code")String code, @Param("deviceCode")String deviceCode);
 
 
 }

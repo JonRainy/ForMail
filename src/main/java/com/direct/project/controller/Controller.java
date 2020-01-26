@@ -51,9 +51,9 @@ public class Controller {
     public HttpResult cleanLicence(@RequestParam("licenceCode") String licenceCode,
                                    @RequestParam("deviceCode") String deviceCode) {
         try {
-                return HttpResult.ofSuccess("重新生成成功", licenceCodeService.queryLicenceCode(licenceCode, deviceCode));
+                return HttpResult.ofSuccess("check success", licenceCodeService.queryLicenceCode(licenceCode, deviceCode));
         } catch (Exception e) {
-            return HttpResult.ofFail("重新生成失败: "+ e);
+            return HttpResult.ofFail("check fail: "+ e);
         }
     }
 

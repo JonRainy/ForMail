@@ -29,8 +29,7 @@ public class LicenceCodeServiceImp implements LicenceCodeService {
 
     @Override
     public Boolean queryLicenceCode(String licenceCode, String deviceCode) {
-        List<LicenceCodeDTO> empty = dao.queryLiceneCodeForUpdate(licenceCode);
-        return false;
+        return dao.checkLiceneCode(licenceCode, deviceCode);
     }
 
 
