@@ -17,7 +17,7 @@ public interface LicenceCodeDao {
 
     void bindLiceneCode(@Param("code")String code, @Param("deviceCode")String deviceCode);
 
-    List<LicenceCodeDTO> queryLiceneCodeForUpdate(@Param("userMail")String user);
+    List<LicenceCodeDTO> queryLiceneCodeForUpdate(@Param("code")String user);
 
     Boolean checkLiceneCode(@Param("code")String code, @Param("deviceCode")String deviceCode);
 
