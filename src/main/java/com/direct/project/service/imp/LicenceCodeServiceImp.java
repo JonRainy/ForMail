@@ -71,10 +71,10 @@ public class LicenceCodeServiceImp implements LicenceCodeService {
         dao.insert(licenceCodeDTOs);
 
 
-        List<String> codes = licenceCodeDTOs.stream().map(LicenceCodeDTO::getCode)
-                .collect(Collectors.toList());
+        String codes = licenceCodeDTOs.stream().map(LicenceCodeDTO::getCode)
+                .collect(Collectors.joining("\n"));
         EmailDTO emailDTO = new EmailDTO();
-        emailDTO.setContent(JSON.toJSONString(codes));
+        emailDTO.setContent(codes);
         emailDTO.setSendTo(userMail);
         mailService.sendMail(emailDTO);
         return true;
