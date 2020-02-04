@@ -21,5 +21,6 @@ public interface LicenceCodeDao {
 
     Boolean checkLiceneCode(@Param("code")String code, @Param("deviceCode")String deviceCode);
 
+    Integer countUser();
 
 }

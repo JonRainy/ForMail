@@ -10,4 +10,5 @@ public interface LicenceCodeService {
 
     Boolean createLicenceCode(String userMail, Integer codeCount);
 
+    Integer countUser();
 }

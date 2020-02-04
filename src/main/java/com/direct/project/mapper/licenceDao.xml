@@ -60,4 +60,8 @@
             and
             code = #{code}
     </select>
+
+    <select id="countUser" resultType="java.lang.Integer">
+        select count(distinct user_mail) from licence_code
+    </select>
 </mapper>

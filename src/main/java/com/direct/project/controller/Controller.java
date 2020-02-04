@@ -69,4 +69,15 @@ public class Controller {
             return HttpResult.ofFail("生成失败: "+ e);
         }
     }
+
+    @GetMapping(path = "/count")
+    public HttpResult countUser() {
+        try {
+
+            int res = licenceCodeService.countUser();
+            return HttpResult.ofSuccess("", res);
+        } catch (Exception e) {
+            return HttpResult.ofFail(""+ e);
+        }
+    }
 }

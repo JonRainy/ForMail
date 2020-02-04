@@ -80,5 +80,10 @@ public class LicenceCodeServiceImp implements LicenceCodeService {
         return true;
     }
 
+    @Override
+    public Integer countUser() {
+        return dao.countUser();
+    }
+
 
 }
